@@ -25,7 +25,7 @@
                 <div class="p-5">
                     <div class="flex items-center justify-between gap-3">
                         <span class="inline-flex items-center rounded-full border border-gray-700 bg-gray-950 px-3 py-1 text-xs font-semibold text-cyan-300">
-                            {{ $tutorial->category }}
+                            {{ $tutorial->category?->name ?? 'Uncategorized' }}
                         </span>
                         <span class="text-xs text-gray-500">
                             {{ $tutorial->created_at?->format('d M Y') }}

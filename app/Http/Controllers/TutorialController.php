@@ -10,6 +10,7 @@ class TutorialController extends Controller
     public function index(): View
     {
         $tutorials = Tutorial::query()
+            ->with(['category', 'user'])
             ->latest()
             ->paginate(12);
 

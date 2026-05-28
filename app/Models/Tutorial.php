@@ -12,8 +12,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
     'slug',
     'content',
     'thumbnail',
-    'category',
     'user_id',
+    'category_id',
 ])]
 class Tutorial extends Model
 {
@@ -23,6 +23,11 @@ class Tutorial extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
     }
 }
 

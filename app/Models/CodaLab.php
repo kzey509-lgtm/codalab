@@ -17,8 +17,6 @@ class CodaLab extends Model
 {
     use HasFactory;
 
-    protected $table = 'codalabs';
-
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
